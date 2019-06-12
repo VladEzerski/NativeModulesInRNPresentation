@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Shower Presentation Engine</title>
+        <title>Native modules integration to RN</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -16,236 +16,233 @@
     </head>
     <body class="shower list">
         <header class="caption">
-            <h1>Shower Presentation Engine</h1>
-            <p>Yours Truly, Famous Inc.</p>
+            <h1>Native modules integration to RN</h1>
         </header>
 
         <section class="slide" id="cover">
-            <h2>Native modules</h2>
-            <m>integration to</m>
-            <figure>
-                <img class="cover" src="pictures/RN-1.jpg" alt="main icon" />
-                <figcaption class="copyright right white">
-                    <a href="http://fiftyfootshadows.net/">© John Carey</a>
-                </figcaption>
-            </figure>
+            <h3>Native modules integration to</h3>
+            <div>
+                <img class="cover" src="pictures/RN-3.jpg" alt="main icon" />
+            </div>
             <style>
-                #cover h2 {
-                    margin: 40px 0 0;
-                    color: #67d4ff;
-                    text-align: center;
-                    font-size: 50px;
-                }
-
-                #cover p {
-                    margin: 10px 0 0;
-                    text-align: center;
-                    color: white;
-                    font-style: italic;
-                    font-size: 20px;
-                }
-
-                #cover m {
+                #cover h3 {
+                    margin: 0 0 0;
                     color: white;
                     text-align: center;
                     font-size: 50px;
-                }
-
-                #cover p a {
-                    color: white;
                 }
             </style>
         </section>
 
         <section class="slide">
-            <h2>Shower key features</h2>
+            <h2>Cоставляющие проекта:</h2>
             <ol>
-                <li>Built on HTML, CSS and JavaScript</li>
-                <li>Works in all modern browsers</li>
-                <li>Themes are separated from engine</li>
-                <li>Fully keyboard accessible</li>
-                <li>Printable to PDF</li>
+                <li>ios - module</li>
+                <li>android - module</li>
+                <li>RN code</li>
             </ol>
-            <p class="note">
-                Shower ['ʃəuə] noun. A person or thing that shows.
-            </p>
+        </section>
+
+        <section class="slide" id="modules">
+            <div class="slide_container">
+                <figure>
+                    <img src="pictures/ios.jpg" alt="ios icon" />
+                </figure>
+                <figure>
+                    <img src="pictures/android.jpg" alt="android icon" />
+                </figure>
+            </div>
+            <style>
+                .slide_container {
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                #modules img {
+                    height: 100%;
+                }
+            </style>
+        </section>
+
+        <section class="slide" id="scheme">
+            <h2>
+                React Native построен таким образом, что использует существующие
+                компиляторы:
+            </h2>
+            <div>
+                <img src="pictures/scheme1.png" alt="ios icon" />
+            </div>
+            <style>
+                #scheme img {
+                    padding-left: 70px;
+                    width: 75%;
+                }
+            </style>
         </section>
 
         <section class="slide">
-            <h2>Plain text on your slides</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur
-                <a href="#4">adipisicing</a> elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, <em>quis nostrud</em> exercitation ullamco laboris
-                <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis
-                aute irure <i>dolor</i> in reprehenderit in voluptate velit esse
-                cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in
-                <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id
-                est laborum.
-            </p>
-        </section>
-
-        <section class="slide">
-            <h2>Two columns if you like</h2>
-            <div class="columns two">
+            <h2>Как происходит общение между компонентами в RN?</h2>
+            <div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-                </p>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia.
+                    React Native имеет дело с двумя областями: JavaScript и
+                    Native. Оба они могут обмениваться информацией. Они общаются
+                    с помощью «моста». Мост - это концепция, которая
+                    обеспечивает способ двунаправленной и асинхронной связи
+                    между этими двумя вселенными. Здесь важно то, что они
+                    полностью написаны на разных технологиях, но умеют общаться.
                 </p>
             </div>
         </section>
 
         <section class="slide">
-            <h2>All kind of lists</h2>
+            <h2>
+                Мост построен на C / C ++ и, следовательно, может быть запущен
+                на нескольких платформах, ОС и т. д.
+            </h2>
+            <div class="bridge_container">
+                <img src="pictures/bridge1.png" alt="bridge icon" />
+            </div>
+            <style>
+                .bridge_container {
+                    justify-content: center;
+                }
+            </style>
+        </section>
+
+        <section class="slide" id="bridges">
+            <div class="bridges_container">
+                <div>
+                    <img src="pictures/brifge-ios.png" alt="ios icon" />
+                </div>
+                <div>
+                    <img src="pictures/bridge-android.png" alt="android icon" />
+                </div>
+            </div>
+            <style>
+                .bridges_container {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 10%;
+                }
+            </style>
+        </section>
+
+        <section class="slide">
+            <h2>Как построено общение между native и js у нас в приложении?</h2>
             <ol>
-                <li>Simple lists are marked with bullets</li>
-                <li>Ordered lists begin with a number</li>
-                <li>
-                    You can even nest lists one inside another
-                    <ul>
-                        <li>Or mix their types</li>
-                        <li>But do not go too far</li>
-                        <li>Otherwise audience will be bored</li>
-                    </ul>
+                <li class="next">
+                    Мы используем RCTRootView и RCTBridge в ios. RCTRootView это
+                    стандартный UIView компонент, который совместно с RCTBridge
+                    предоставляет нам интерфейс для обмена данными нативной и js
+                    стороны
                 </li>
-                <li>Look, seven rows exactly!</li>
+                <li class="next">
+                    В android для этих целей служит класс ReactActivityDelegate
+                    и его методы.
+                </li>
             </ol>
         </section>
 
         <section class="slide">
-            <h2>Serious citations</h2>
-            <figure>
-                <blockquote>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia.
-                    </p>
-                </blockquote>
-                <figcaption>Marcus Tullius Cicero</figcaption>
-            </figure>
+            <div class="text_container">
+                <p>
+                    Благодаря этим компонентам мы без проблем можем брать
+                    необходимую информацию с девайса, такую как TimeZone,
+                    Locale, config, hosts и т.д. и передавать ее в js часть.
+                </p>
+            </div>
+            <style>
+                .text_container {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 15%;
+                }
+            </style>
         </section>
 
         <section class="slide">
-            <h2>Code samples</h2>
+            <h2>Использование модулей</h2>
+            <div>
+                <p class="next">
+                    Нативные модули обычно распространяются в виде пакетов npm.
+                    Их отличие лишь в том, что они являются нативными модулями и
+                    содержат проект библиотеки Xcode или Android.
+                </p>
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>IOS модуль</h2>
+            <div>
+                <p class="next">
+                    RCT_EXPORT_MODULE() - как следует из названия, он
+                    экспортирует модули, т.е. теперь мост знает о нашем модуле.
+                </p>
+                <p class="next">
+                    RCT_REMAP_METHOD(js_name, method) - позволяет вызвать из js
+                    необходимую функцию.
+                </p>
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>Android модуль</h2>
+            <div>
+                <li class="next">
+                    Создается класс унасследованный от
+                    ReactContextBaseJavaModule(reactContext), который будет
+                    содержать в себе реализацию метода, вызываемого из js.
+                </li>
+                <li class="next">
+                    Создается пакет, унасследованный от ReactPackage, который
+                    хранит в себе ранее созданный модуль.
+                </li>
+                <li class="next">
+                    Созданный пакет добавляется в MainApplication.
+                </li>
+            </div>
+        </section>
+
+        <section class="slide">
+            <h2>appReloader.js</h2>
             <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
+            <code>import { NativeModules } from 'react-native'</code>
+            <code>export default NativeModules.AppReloader</code>
+            <code>----------------------------------------</code>
+            <code>hosts = await appReloader.reloadApp()</code>
         </pre>
         </section>
 
         <section class="slide">
-            <h2>Even tables</h2>
-            <table>
-                <tr>
-                    <th scope="col">Locavore</th>
-                    <th>Umami</th>
-                    <th>Helvetica</th>
-                    <th>Vegan</th>
-                </tr>
-                <tr>
-                    <th scope="row">Fingerstache</th>
-                    <td>Kale</td>
-                    <td>Chips</td>
-                    <td>Keytar</td>
-                </tr>
-                <tr>
-                    <th scope="row">Sriracha</th>
-                    <td>Gluten-free</td>
-                    <td>Ennui</td>
-                    <td>Keffiyeh</td>
-                </tr>
-                <tr>
-                    <th scope="row">Thundercats</th>
-                    <td>Jean</td>
-                    <td>Shorts</td>
-                    <td>Biodiesel</td>
-                </tr>
-                <tr>
-                    <th scope="row">Terry</th>
-                    <td>Richardson</td>
-                    <td>Swag</td>
-                    <td>Blog</td>
-                </tr>
-            </table>
+            <h2>Таким образом:</h2>
 
-            <p>It’s good to have information organized.</p>
-        </section>
-
-        <section class="slide" id="picture">
-            <h2>Pictures</h2>
-            <figure>
-                <img
-                    class="cover"
-                    src="pictures/picture.jpg"
-                    alt="Orange typewriter on a wooden table close-up"
-                />
-                <figcaption class="copyright right white">
-                    <a href="http://fiftyfootshadows.net/">© John Carey</a>
-                </figcaption>
-            </figure>
-            <style>
-                #picture h2 {
-                    color: white;
-                }
-            </style>
+            <li>
+                Общение между компонентами в RN происходит с помощью «моста».
+            </li>
+            <li>
+                В нашем приложении мы используем два способа общения:
+                <p>
+                    - передача данных из нативной части, используя RCTRootView,
+                    RCTBridge / ReactActivityDelegate;
+                </p>
+                <p>- использование модулей;</p>
+            </li>
         </section>
 
         <section class="slide">
-            <h2 class="shout shrink">You can even shout this way</h2>
-        </section>
-
-        <section class="slide">
-            <h2>Inner navigation</h2>
-            <ol>
-                <li>Lets you reveal list items one by one</li>
-                <li class="next">To keep some key points</li>
-                <li class="next">In secret from audience</li>
-                <li class="next">But it will work only once</li>
-                <li class="next">Nobody wants to see the same joke twice</li>
-            </ol>
-        </section>
-
-        <section class="slide" id="see-more">
-            <h2 class="shout">
-                <img src="pictures/logo.svg" alt="Shower logo" />
-                <a href="https://github.com/shower/shower"
-                    >See more on GitHub</a
-                >
-            </h2>
+            <div class="last_slide">
+                <h2>
+                    Спасибо за внимание!
+                </h2>
+            </div>
             <style>
-                #see-more h2 {
-                    font-size: 100px;
-                }
-
-                #see-more img {
-                    width: 0.72em;
-                    height: 0.72em;
+                .last_slide {
+                    display: flex;
+                    padding-top: 20%;
+                    padding-left: 25%;
                 }
             </style>
         </section>
-
-        <footer class="badge">
-            <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-        </footer>
 
         <div class="progress"></div>
 
